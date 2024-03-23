@@ -1,5 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom"; // Link imported so we can click on links without refreshing the page
 
 // update this list with the navigation required
 // this is just an example
@@ -46,19 +47,21 @@ export default function Example() {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      // use link to avoid a page refresh which removes state
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
+                        onClick={() => updateCurrentNav(item.name)}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium"
+                          "px-3 py-2 rounded-md text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
