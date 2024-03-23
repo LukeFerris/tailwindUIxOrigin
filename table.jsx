@@ -1,3 +1,4 @@
+// remember to update the description text for the table
 // example data
 const people = [
   {
@@ -18,8 +19,8 @@ export default function Example() {
             Users
           </h1>
           <p className="mt-2 text-sm text-gray-700">
-            A list of all the users in your account including their name, title,
-            email and role.
+            [You should update this text with a brief description of the purpose
+            of the table]
           </p>
         </div>
         {/* This section can be included if you need an add feature */}
