@@ -3,8 +3,9 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 // update this list with the navigation required
 // this is just an example
+// current must be tracked in Context state to change the style of the selected page
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
+  { name: "Dashboard", href: "#", current: true }, // initially set as selected
   { name: "Team", href: "#", current: false },
   { name: "Projects", href: "#", current: false },
   { name: "Calendar", href: "#", current: false },
