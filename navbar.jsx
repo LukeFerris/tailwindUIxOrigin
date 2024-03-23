@@ -37,7 +37,7 @@ export default function Example() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  {/* can be replaced with simple text or text plus a relevant hero icon */}
+                  {/* This image should be replace with "[SOLUTION_NAME]"" or "[SOLUTION_NAME]" plus a relevant hero icon */}
                   <img
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
