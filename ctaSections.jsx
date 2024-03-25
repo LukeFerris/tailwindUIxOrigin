@@ -2,6 +2,8 @@
 // You must choose only one based on the specification
 // You should complete any text as required based on context rather than leaving the text content as it is in the example
 
+import { Link } from "react-router-dom"; // Link imported so we can click on links without refreshing the page
+
 export default function SimpleStackedExample() {
     return (
       <div className="bg-white">
@@ -12,20 +14,22 @@ export default function SimpleStackedExample() {
             Start using our app today.
           </h2>
           <div className="mt-10 flex items-center gap-x-6">
-            <a
+            <Link
               href="#"
               className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Get started
-            </a>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            </Link>
+            <Link href="#" className="text-sm font-semibold leading-6 text-gray-900">
               Learn more <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
     )
   }
+
+  import { Link } from "react-router-dom"; // Link imported so we can click on links without refreshing the page
 
   export default function SimpleCenteredOnDarkExample() {
     return (
@@ -40,15 +44,15 @@ export default function SimpleStackedExample() {
               commodo do ea.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+              <Link
                 href="#"
                 className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Get started
-              </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-white">
+              </Link>
+              <Link href="#" className="text-sm font-semibold leading-6 text-white">
                 Learn more <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
             <svg
               viewBox="0 0 1024 1024"
@@ -69,6 +73,8 @@ export default function SimpleStackedExample() {
     )
   }
 
+  import { Link } from "react-router-dom"; // Link imported so we can click on links without refreshing the page
+
   export default function SimpleCenteredOnLightExample() {
     return (
       <div className="bg-white">
@@ -84,15 +90,15 @@ export default function SimpleStackedExample() {
               commodo do ea.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+              <Link
                 href="#"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
-              </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+              </Link>
+              <Link href="#" className="text-sm font-semibold leading-6 text-gray-900">
                 Learn more <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -100,6 +106,8 @@ export default function SimpleStackedExample() {
     )
   }
   
+  import { Link } from "react-router-dom"; // Link imported so we can click on links without refreshing the page
+
   export default function SimpleCenteredOnDarkExample() {
     return (
       <div className="relative isolate overflow-hidden bg-gray-900">
@@ -115,15 +123,15 @@ export default function SimpleStackedExample() {
               commodo do ea.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+              <Link
                 href="#"
                 className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Get started
-              </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-white">
+              </Link>
+              <Link href="#" className="text-sm font-semibold leading-6 text-white">
                 Learn more <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -144,6 +152,8 @@ export default function SimpleStackedExample() {
     )
   }
   
+  import { Link } from "react-router-dom"; // Link imported so we can click on links without refreshing the page
+
   export default function SimpleCenteredOnBrandedColorExample() {
     return (
       <div className="bg-indigo-700">
@@ -159,15 +169,15 @@ export default function SimpleStackedExample() {
               commodo do ea.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+              <Link
                 href="#"
                 className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Get started
-              </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-white">
+              </Link>
+              <Link href="#" className="text-sm font-semibold leading-6 text-white">
                 Learn more <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
