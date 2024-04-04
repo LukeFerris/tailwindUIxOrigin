@@ -51,7 +51,6 @@ export default function Example() {
                       <Link
                         key={item.name}
                         to={item.href}
-                        onClick={() => updateCurrentNav(item.name)}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
