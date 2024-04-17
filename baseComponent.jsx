@@ -8,7 +8,7 @@ export default function [CELL_ID]_Component() {
 
   // IMPORTANT: This component serves as a placeholder and does not interact with the context state or functionality.
   return (
-    <div className="w-full align-top text-left space-y-8">
+    <div className="w-full align-top text-left">
       Content goes here
     </div>
   );
