@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext } from 'react'; // use context is always imported
 import { Context } from './Context_Provider.jsx'; // we always import context, regardless of whether we use it or not
 
 // Default export of Companies_Component
