@@ -1,6 +1,9 @@
 // react imports go here
 import React from 'react';
 
+// headless UI imports can go here
+// import { Dialog } from '@headlessui/react'; -- example of a headless UI import
+
 // react-redux imports go here
 import { useDispatch, useSelector } from "react-redux";
 // import { add, reset } from "./calculatorSlice"; -- this is a commented out example of how a component can import actions it requires from a slice
