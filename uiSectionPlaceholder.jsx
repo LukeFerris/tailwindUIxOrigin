@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { Context } from './Context_Provider.jsx'; // we always import context, regardless of whether we use it or not
 
 // Default export of Companies_Component
 export default function [CELL_ID]_Component() {

@@ -1,7 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom"; // Link imported so we can click on links without refreshing the page
-import { Context } from "./Context_Provider"; // Keep this link even if Context is not required
 
 // update this list with the navigation required
 // this is just an example
