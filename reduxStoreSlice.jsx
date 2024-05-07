@@ -10,8 +10,9 @@ const visibilitySlice = createSlice({
   name: "visibility",
   initialState,
   reducers: {},
+  // if any extraReducers are required
   extraReducers: (builder) => {},
 });
 
-// Any action creator must be exported here
+// Any action publically required creator or action or reducer not exported elsewhere must be exported here
 // export const { toggleVisibility } = visibilitySlice.actions;
