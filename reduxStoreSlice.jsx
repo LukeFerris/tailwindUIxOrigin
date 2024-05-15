@@ -81,7 +81,6 @@ const tasksSlice = createSlice({
 });
 
 // expose selectors to access the primary state (tasks) and the loading and error states
-// also ensure to export any reducers which need to be publically accessible
 export const selectTasks = (state) => state.tasks.tasks;
 export const selectLoading = (state) => state.tasks.loading;
 export const selectError = (state) => state.tasks.error;
