@@ -38,7 +38,7 @@ export default function Example() {
 // this is an example dropdown (select) list for you to use in your forms
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
-import { CheckIcon, ChevronDownIcon } from '@heroicons/react/solid'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
 const people = [
   { id: 1, name: 'Wade Cooper' },
