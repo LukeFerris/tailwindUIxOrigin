@@ -10,6 +10,7 @@ import axios from "axios";
 const API_URL = import.meta.env.VITE_TaskAPIUrl;
 
 // Async thunk for fetching tasks from the API using Axios
+// input parameter types must be included as a comment
 export const fetchTasks = createAsyncThunk(
   "tasks/fetchTasks",
   async (_, { rejectWithValue }) => {
@@ -25,6 +26,8 @@ export const fetchTasks = createAsyncThunk(
 );
 
 // Async thunk for posting a new task to the API using Axios
+// input parameter types must be included as a comment for thunks that require inputs
+// e.g. newTask: { title: string, description: string }
 export const postTask = createAsyncThunk(
   "tasks/postTask",
   async (newTask, { rejectWithValue }) => {

@@ -8,7 +8,7 @@ import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 // import { add, reset } from "./calculatorSlice"; -- this is a commented out example of how a component can import actions it requires from a slice
 
-// Default export of Companies_Component
+// Default export of [CELL_ID]_Component
 export default function [CELL_ID]_Component() {
   // use dispatch from redux to dispatch actions
   const dispatch = useDispatch();
