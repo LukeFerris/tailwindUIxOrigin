@@ -10,7 +10,6 @@ import axios from "axios";
 const API_URL = import.meta.env.VITE_TaskAPIUrl;
 
 // Async thunk for fetching tasks from the API using Axios
-// input parameter types must be included as a comment
 export const fetchTasks = createAsyncThunk(
   "tasks/fetchTasks",
   async (_, { rejectWithValue }) => {
@@ -25,6 +24,16 @@ export const fetchTasks = createAsyncThunk(
   }
 );
 
+function validateTask(task) {
+  // check each property of the task object, ensuring it is present and of the right type
+  if (!task.title || typeof task.title !== "string") {
+    return "Task title must be a string";
+  }
+  if (!task.description || typeof task.description !== "string") {
+    return "Task description must be a string";
+  }
+}
+
 // Async thunk for posting a new task to the API using Axios
 // input parameter types must be included as a comment for thunks that require inputs
 // e.g. newTask: { title: string, description: string }
@@ -32,6 +41,12 @@ export const postTask = createAsyncThunk(
   "tasks/postTask",
   async (newTask, { rejectWithValue }) => {
     try {
+      // validate the task before posting
+      const validationError = validateTask(newTask);
+      if (validationError) {
+        return rejectWithValue(validationError);
+      }
+
       const response = await axios.post(API_URL, newTask, {
         headers: { "Content-Type": "application/json" },
       });
