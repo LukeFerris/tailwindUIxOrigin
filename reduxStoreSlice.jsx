@@ -100,10 +100,12 @@ const tasksSlice = createSlice({
   },
 });
 
-// expose selectors to access the primary state (tasks) and the loading and error states
+// expose any selectors to access the primary state (tasks) and the loading and error states
 export const selectTasks = (state) => state.tasks.tasks;
 export const selectLoading = (state) => state.tasks.loading;
 export const selectError = (state) => state.tasks.error;
 
 // Export the reducer to be used in the store
 export const tasksReducer = tasksSlice.reducer;
+
+// DO NOT export the async thunks here.
