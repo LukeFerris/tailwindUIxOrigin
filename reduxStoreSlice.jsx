@@ -11,7 +11,7 @@ const API_URL = import.meta.env.VITE_TaskAPIUrl;
 
 // Async thunk for fetching tasks from the API using Axios
 // inputs are: none (add inputs and their types here as a comment)
-// make sure you add inputs here and their types
+// make sure you add a comment for each required input to the async function and its type
 export const fetchTasks = createAsyncThunk(
   "tasks/fetchTasks",
   async (_, { rejectWithValue }) => {
