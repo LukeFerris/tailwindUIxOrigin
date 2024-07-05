@@ -12,7 +12,8 @@ const API_URL = import.meta.env.VITE_TaskAPIUrl;
 // Async thunk for fetching tasks from the API using Axios
 // inputs are: none (add inputs and their types here as a comment)
 // make sure you add a comment for each required input to the async function and its type
-export const fetchTasks = createAsyncThunk(
+// do not export thunks here
+const fetchTasks = createAsyncThunk(
   "tasks/fetchTasks",
   async (_, { rejectWithValue }) => {
     try {
@@ -39,7 +40,8 @@ function validateTask(task) {
 // Async thunk for posting a new task to the API using Axios
 // input parameter types must be included as a comment for thunks that require inputs
 // e.g. newTask: { title: string, description: string }
-export const postTask = createAsyncThunk(
+// do not export this thunk here
+const postTask = createAsyncThunk(
   "tasks/postTask",
   async (newTask, { rejectWithValue }) => {
     try {
@@ -108,4 +110,5 @@ export const selectError = (state) => state.tasks.error;
 // Export the reducer to be used in the store
 export const tasksReducer = tasksSlice.reducer;
 
-// DO NOT export the async thunks here.
+// Export all async thunks here
+export { fetchTasks, postTask };
