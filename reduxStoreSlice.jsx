@@ -102,10 +102,7 @@ const tasksSlice = createSlice({
   },
 });
 
-// expose any selectors to access the primary state (tasks) and the loading and error states
-export const selectTasks = (state) => state.tasks.tasks;
-export const selectLoading = (state) => state.tasks.loading;
-export const selectError = (state) => state.tasks.error;
+// slices never expose selectors, the state is instead accessed directly
 
 // Export the reducer to be used in the store
 export const tasksReducer = tasksSlice.reducer;
