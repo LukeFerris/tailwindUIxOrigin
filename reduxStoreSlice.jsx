@@ -62,6 +62,17 @@ const postTask = createAsyncThunk(
   }
 );
 
+// Example Async thunk for toggling visibility of a modal
+// All state changes are done using async thunks, including simply state propertie like this
+// inputs are: none
+const toggleModalVisibility = createAsyncThunk(
+  "modal/toggleModalVisibility",
+  async (_, { getState }) => {
+    const { modalVisibility } = getState().modalState;
+    return !modalVisibility;
+  }
+);
+
 const initialState = {
   tasks: [],
   loading: false,
@@ -98,6 +109,9 @@ const tasksSlice = createSlice({
       .addCase(postTask.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
+      })
+      .addCase(toggleModalVisibility.fulfilled, (state, action) => {
+        state.modalVisibility = action.payload;
       });
   },
 });
@@ -108,4 +122,4 @@ const tasksSlice = createSlice({
 export const tasksReducer = tasksSlice.reducer;
 
 // Export all async thunks here
-export { fetchTasks, postTask };
+export { fetchTasks, postTask, toggleModalVisibility };
