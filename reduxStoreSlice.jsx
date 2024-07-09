@@ -12,8 +12,7 @@ const API_URL = import.meta.env.VITE_TaskAPIUrl;
 // Async thunk for fetching tasks from the API using Axios
 // inputs are: none (add inputs and their types here as a comment)
 // make sure you add a comment for each required input to the async function and its type
-// do not export thunks here
-const fetchTasks = createAsyncThunk(
+export const fetchTasks = createAsyncThunk(
   "tasks/fetchTasks",
   async (_, { rejectWithValue }) => {
     try {
@@ -40,8 +39,7 @@ function validateTask(task) {
 // Async thunk for posting a new task to the API using Axios
 // input parameter types must be included as a comment for thunks that require inputs
 // e.g. newTask: { title: string, description: string }
-// do not export this thunk here
-const postTask = createAsyncThunk(
+export const postTask = createAsyncThunk(
   "tasks/postTask",
   async (newTask, { rejectWithValue }) => {
     try {
@@ -65,7 +63,7 @@ const postTask = createAsyncThunk(
 // Example Async thunk for toggling visibility of a modal
 // All state changes are done using async thunks, including simply state propertie like this
 // inputs are: none
-const toggleModalVisibility = createAsyncThunk(
+export const toggleModalVisibility = createAsyncThunk(
   "modal/toggleModalVisibility",
   async (_, { getState }) => {
     const { modalVisibility } = getState().modalState;
@@ -121,5 +119,4 @@ const tasksSlice = createSlice({
 // Export the reducer to be used in the store
 export const tasksReducer = tasksSlice.reducer;
 
-// Export all async thunks here
-export { fetchTasks, postTask, toggleModalVisibility };
+// IMPORTANT: Never export thunks here
