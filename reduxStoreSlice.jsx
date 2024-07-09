@@ -5,6 +5,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // IMPORTANT: The store key for this slice is the same as the name: [CHANGE for name property of slice e.g. tasksState in this example]. You should use this when accessing state related to this slice.
+// IMPORTANT: For example to access the tasks array from a component you would use useSelector(state => state.[CHANGE for name property of slice e.g. tasksState in this example].tasks ensuring you get the case correct as redux slices are case sensitive)
 
 // Example API endpoing using the VITE import.meta approach
 const API_URL = import.meta.env.VITE_TaskAPIUrl;
