@@ -4,6 +4,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+// Only required if the slice is responsible for managing the state of authentication for the app
+// import {
+//   CognitoUserPool,
+//   CognitoUser,
+//   AuthenticationDetails
+// } from "amazon-cognito-identity-js";
+
 // IMPORTANT: The store key for this slice is the same as the name: [CHANGE for name property of slice e.g. tasksState in this example]. You should use this when accessing state related to this slice.
 // IMPORTANT: For example to access the tasks array from a component you would use useSelector(state => state.[CHANGE for name property of slice e.g. tasksState in this example].tasks ensuring you get the case correct as redux slices are case sensitive)
 
