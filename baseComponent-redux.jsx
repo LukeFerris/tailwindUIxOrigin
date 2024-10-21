@@ -6,7 +6,7 @@ import React from 'react';
 
 // react-redux imports go here
 import { useDispatch, useSelector } from "react-redux";
-// import { add, reset } from "./calculatorSlice"; -- this is a commented out example of how a component can import actions it requires from a slice
+// import { add, reset } from "./calculatorSlice"; -- this is a commented out example of how a component can import actions it requires from a slice. Only import them if they are shown in the above text as existing. If they are not shown as available, they do not exist.
 
 // Default export of [CELL_ID]_Component
 export default function [CELL_ID]_Component() {
