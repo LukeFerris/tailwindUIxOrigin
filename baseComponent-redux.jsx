@@ -1,3 +1,4 @@
+// THIS IS AN EXAMPLE REACT COMPONENT THAT USES REDUX. IT IS A PLACEHOLDER AND SHOULD BE EDITED
 // react imports go here
 import React from 'react';
 
